@@ -6556,15 +6556,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <plain>
 <text x="92.71" y="36.83" size="1.778" layer="97">There are two Tinys to cover both footprints (I get them wrong every single time...)</text>
 <text x="25.4" y="46.99" size="1.778" layer="97">GND</text>
-<text x="25.4" y="52.07" size="1.778" layer="97">VCC</text>
-<text x="22.86" y="49.53" size="1.778" layer="97">RESET</text>
+<text x="25.4" y="49.53" size="1.778" layer="97">VCC</text>
+<text x="22.86" y="52.07" size="1.778" layer="97">RESET</text>
 <text x="25.4" y="54.61" size="1.778" layer="97">SCK</text>
 <text x="24.13" y="57.15" size="1.778" layer="97">MISO</text>
 <text x="24.13" y="59.69" size="1.778" layer="97">MOSI</text>
 <text x="15.24" y="59.69" size="1.778" layer="97">PB0</text>
 <text x="15.24" y="57.15" size="1.778" layer="97">PB1</text>
 <text x="15.24" y="54.61" size="1.778" layer="97">PB2</text>
-<text x="15.24" y="49.53" size="1.778" layer="97">PB5</text>
+<text x="15.24" y="52.07" size="1.778" layer="97">PB5</text>
 <text x="81.28" y="107.95" size="1.778" layer="97" rot="R90">PB3</text>
 <text x="83.82" y="107.95" size="1.778" layer="97" rot="R90">PB4</text>
 </plain>
@@ -6619,9 +6619,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="36.83" y="64.135" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="40.64" y="43.18" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="R4" gate="G$1" x="46.99" y="50.8" smashed="yes">
-<attribute name="NAME" x="41.91" y="52.2986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="50.8" y="48.768" size="1.778" layer="96"/>
+<instance part="R4" gate="G$1" x="49.53" y="53.34" smashed="yes">
+<attribute name="NAME" x="44.45" y="54.8386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="53.34" y="51.308" size="1.778" layer="96"/>
 </instance>
 <instance part="LED1" gate="G$1" x="49.53" y="111.76" smashed="yes" rot="R90">
 <attribute name="NAME" x="54.102" y="115.316" size="1.778" layer="95" rot="R180"/>
@@ -6657,7 +6657,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="IC3" gate="G$1" pin="PB5/PCINT5/!RESET!/ADC0/DW"/>
 <wire x1="85.09" y1="78.74" x2="90.17" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="52.07" y1="50.8" x2="85.09" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="54.61" y1="53.34" x2="80.01" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="80.01" y1="53.34" x2="80.01" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="80.01" y1="50.8" x2="85.09" y2="50.8" width="0.1524" layer="91"/>
 <junction x="85.09" y="50.8"/>
 </segment>
 </net>
@@ -6728,10 +6730,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="69.85" y1="93.98" x2="90.17" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <junction x="69.85" y="93.98"/>
-<wire x1="69.85" y1="53.34" x2="69.85" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="69.85" y1="50.8" x2="69.85" y2="66.04" width="0.1524" layer="91"/>
 <junction x="69.85" y="66.04"/>
-<pinref part="JP1" gate="A" pin="4"/>
-<wire x1="36.83" y1="53.34" x2="69.85" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="5"/>
+<wire x1="69.85" y1="50.8" x2="36.83" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -6802,13 +6804,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="JP1" gate="A" pin="5"/>
-<wire x1="41.91" y1="50.8" x2="36.83" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PB2/PCINT2/SCK/ADC1/T0"/>
@@ -6820,6 +6815,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="77.47" y="58.42"/>
 <pinref part="JP1" gate="A" pin="3"/>
 <wire x1="77.47" y1="55.88" x2="36.83" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="36.83" y1="53.34" x2="44.45" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
